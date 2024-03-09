@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: 'https://dummyjson.com/auth/login'
+  apiUrl: 'https://dummyjson.com/'
 };

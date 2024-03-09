@@ -1,0 +1,51 @@
+.navbar-findcond {
+  background: #fff;
+  border-color: #ccc;
+  box-shadow: 0 0 2px 0 #ccc;
+}
+
+.navbar-findcond a {
+  color: #f14444;
+}
+
+.navbar-findcond .navbar-nav .nav-link {
+  color: #f14444;
+  border-style: solid;
+  border-width: 0 0 2px 0;
+  border-color: #fff;
+}
+
+.navbar-findcond .navbar-nav .nav-link:hover,
+.navbar-findcond .navbar-nav .nav-link:visited,
+.navbar-findcond .navbar-nav .nav-link:focus,
+.navbar-findcond .navbar-nav .nav-link:active {
+  background: #fff;
+}
+
+.navbar-findcond .navbar-nav .nav-link:hover {
+  border-color: #f14444;
+}
+
+.navbar-findcond .dropdown-divider {
+  background: #ccc;
+}
+
+.navbar-findcond .navbar-toggler {
+  background: #f14444;
+  border-radius: 2px;
+}
+
+.navbar-findcond .navbar-toggler:hover {
+  background: #999;
+}
+
+.navbar-findcond .navbar-toggler-icon {
+  background: #fff;
+}
+
+.navbar-findcond .dropdown-menu {
+  border: 0;
+  background: #fff;
+  border-radius: 4px;
+  margin: 4px 0;
+}

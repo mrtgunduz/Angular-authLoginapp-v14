@@ -1,0 +1,68 @@
+<div class="container d-flex justify-content-center align-items-center vh-100">
+  <div class="wrapper fadeInDown">
+    <div id="formContent">
+      <!-- Tabs Titles -->
+
+      <!-- Icon -->
+      <div style="padding-bottom: 10px" class="fadeIn first">
+        <img
+          src="https://www.pikpng.com/pngl/b/283-2837538_login-icon-line-icons-iconscout-login-icon-images.png"
+          id="icon"
+          alt="User Icon"
+        />
+      </div>
+
+      <!-- Login Form -->
+      <form [formGroup]="loginForm" (ngSubmit)="submit()">
+        <!-- Kullanıcı adı girişi -->
+        <input
+          formControlName="username"
+          type="email"
+          class="form-control"
+          id="exampleInputEmail1"
+          aria-describedby="emailHelp"
+          placeholder="Kullanıcı Adı"
+        />
+
+        <!-- Şifre girişi -->
+        <input
+          formControlName="password"
+          type="password"
+          class="form-control"
+          id="exampleInputPassword1"
+          placeholder="Şifre"
+        />
+
+        <!-- Hata mesajı -->
+
+        <div
+          *ngIf="loginForm.invalid && (loginForm.dirty || loginForm.touched)"
+          class="alert alert-danger"
+        >
+          <div *ngIf="loginForm.controls['username'].errors?.['required']">
+            Kullanıcı adı gereklidir.
+          </div>
+          <div *ngIf="loginForm.controls['password'].errors?.['required']">
+            Şifre gereklidir.
+          </div>
+          <div *ngIf="loginForm.errors?.['invalidCredentials']">
+            Kullanıcı adı veya şifre hatalı.
+          </div>
+        </div>
+
+        <!-- Başarı mesajı -->
+        <div *ngIf="successMessage" class="alert alert-success">
+          {{ successMessage }}
+        </div>
+
+        <!-- Giriş butonu -->
+        <input type="submit" class="fadeIn fourth" value="Giriş Yap" />
+      </form>
+
+      <!-- Remind Passowrd -->
+      <div id="formFooter">
+        <a class="underlineHover disabled" href="#">Şifremi Unuttum (pasif)</a>
+      </div>
+    </div>
+  </div>
+</div>
